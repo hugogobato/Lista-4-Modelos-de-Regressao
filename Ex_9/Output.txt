@@ -1,0 +1,120 @@
+  dose tovos
+1    0    32
+2    0    34
+3    0    33
+4    0    36
+5    0    34
+6    0    33
+   Model      AIC
+1 model1 359.8065
+2 model2 293.4242
+3 model3 317.0061
+4 model4 339.0190
+5 model5 289.4506
+6 model6 289.0941
+Poisson model 
+Total points: 49 
+Points out of envelope: 45 ( 91.84 %) 
+Total points: 49 
+Points out of envelope: 45 ( 91.84 %) 
+Poisson model 
+Total points: 49 
+Points out of envelope: 7 ( 14.29 %) 
+Total points: 49 
+Points out of envelope: 7 ( 14.29 %) 
+Poisson model 
+Total points: 49 
+Points out of envelope: 22 ( 44.9 %) 
+Total points: 49 
+Points out of envelope: 22 ( 44.9 %) 
+Poisson model 
+Total points: 49 
+Points out of envelope: 46 ( 93.88 %) 
+Total points: 49 
+Points out of envelope: 46 ( 93.88 %) 
+Poisson model 
+Total points: 49 
+Points out of envelope: 20 ( 40.82 %) 
+Total points: 49 
+Points out of envelope: 20 ( 40.82 %) 
+Poisson model 
+Total points: 49 
+Points out of envelope: 24 ( 48.98 %) 
+Total points: 49 
+Points out of envelope: 24 ( 48.98 %) 
+Model: model1 
+Influential Observations based on Cook's Distance:
+ 7  8 32 34 43 45 47 49 
+ 7  8 32 34 43 45 47 49 
+
+Model: model2 
+Influential Observations based on Cook's Distance:
+34 43 44 
+34 43 44 
+
+Model: model3 
+Influential Observations based on Cook's Distance:
+ 8 34 43 44 47 
+ 8 34 43 44 47 
+
+Model: model4 
+Influential Observations based on Cook's Distance:
+ 8 34 43 44 47 
+ 8 34 43 44 47 
+
+Model: model5 
+Influential Observations based on Cook's Distance:
+32 43 44 
+32 43 44 
+
+Model: model6 
+Influential Observations based on Cook's Distance:
+43 44 
+43 44 
+
+Before refitting without influential points 
+                                                            Coefficient
+(Intercept)                                                 (Intercept)
+dose                                                               dose
+I(as.numeric(as.character(dose))^2) I(as.numeric(as.character(dose))^2)
+                                         Estimate exp_Estimate      Lower_CI
+(Intercept)                          3.420529e+00   30.5855767  3.306372e+00
+dose                                 3.589532e-03    1.0035960  1.706012e-03
+I(as.numeric(as.character(dose))^2) -2.711607e-05    0.9999729 -3.382701e-05
+                                         Upper_CI exp_Lower_CI exp_Upper_CI
+(Intercept)                          3.5308456660   27.2859641   34.1528373
+dose                                 0.0054968725    1.0017075    1.0055120
+I(as.numeric(as.character(dose))^2) -0.0000205286    0.9999662    0.9999795
+After refitting without influential points 
+                                                            Coefficient
+(Intercept)                                                 (Intercept)
+dose                                                               dose
+I(as.numeric(as.character(dose))^2) I(as.numeric(as.character(dose))^2)
+                                         Original No_Influential     Abs_Diff
+(Intercept)                          3.420529e+00   3.423516e+00 2.987424e-03
+dose                                 3.589532e-03   3.597676e-03 8.144433e-06
+I(as.numeric(as.character(dose))^2) -2.711607e-05  -2.787024e-05 7.541663e-07
+                                    Rel_Abs_Diff
+(Intercept)                         0.0008733808
+dose                                0.0022689403
+I(as.numeric(as.character(dose))^2) 0.0278125207
+                                                            Coefficient
+(Intercept)                                                 (Intercept)
+dose                                                               dose
+I(as.numeric(as.character(dose))^2) I(as.numeric(as.character(dose))^2)
+                                        Original No_Influential
+(Intercept)                         0.000000e+00    0.00000e+00
+dose                                2.049547e-04    2.90253e-04
+I(as.numeric(as.character(dose))^2) 1.287988e-15    8.75584e-15
+                                                            Coefficient
+(Intercept)                                                 (Intercept)
+dose                                                               dose
+I(as.numeric(as.character(dose))^2) I(as.numeric(as.character(dose))^2)
+                                         Estimate exp_Estimate      Lower_CI
+(Intercept)                          3.423516e+00   30.6770854  3.309160e+00
+dose                                 3.597676e-03    1.0036042  1.664499e-03
+I(as.numeric(as.character(dose))^2) -2.787024e-05    0.9999721 -3.499318e-05
+                                         Upper_CI exp_Lower_CI exp_Upper_CI
+(Intercept)                          3.534002e+00    27.362128   34.2608167
+dose                                 5.557300e-03     1.001666    1.0055728
+I(as.numeric(as.character(dose))^2) -2.090227e-05     0.999965    0.9999791

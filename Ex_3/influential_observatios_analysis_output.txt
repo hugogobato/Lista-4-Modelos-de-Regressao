@@ -1,0 +1,12 @@
+            Coefficient   Original   No_28_32      No_28      No_32
+(Intercept) (Intercept)  5.8154109  7.9380153  6.1250636  6.7069633
+log(WBC)       log(WBC) -0.3044004 -0.5910623 -0.3491218 -0.4240567
+AGPositive   AGPositive  1.0176452  1.5813347  1.1174173  1.2294012
+            Abs_Diff_No_28_32 Abs_Diff_No_28 Abs_Diff_No_32
+(Intercept)         2.1226043     0.30965266      0.8915523
+log(WBC)            0.2866619     0.04472144      0.1196563
+AGPositive          0.5636895     0.09977208      0.2117560
+            Rel_Abs_Diff_No_28_32 Rel_Abs_Diff_No_28 Rel_Abs_Diff_No_32
+(Intercept)             0.3649965         0.05324691          0.1533086
+log(WBC)                0.9417263         0.14691650          0.3930885
+AGPositive              0.5539155         0.09804210          0.2080843

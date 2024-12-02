@@ -1,0 +1,112 @@
+  Germ_Temp Humidity_Level Temperature Germinated Not_Germinated
+1        11            low          21         98              2
+2        11            low          42         96              4
+3        11            low          62         62             38
+4        11         medium          21         94              6
+5        11         medium          42         79             21
+6        11         medium          62          3             97
+ Germ_Temp Humidity_Level Temperature   Germinated    Not_Germinated 
+ 11:9      low   :6       21:6        Min.   : 1.00   Min.   : 2.00  
+ 21:9      medium:6       42:6        1st Qu.:32.75   1st Qu.: 6.25  
+           high  :6       62:6        Median :75.00   Median :25.00  
+                                      Mean   :61.50   Mean   :38.50  
+                                      3rd Qu.:93.75   3rd Qu.:67.25  
+                                      Max.   :98.00   Max.   :99.00  
+
+Call:
+glm(formula = cbind(Germinated, Not_Germinated) ~ Germ_Temp + 
+    Humidity_Level + Temperature + Humidity_Level:Temperature, 
+    family = binomial(link = "logit"), data = data)
+
+Coefficients:
+                                   Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                          3.3251     0.3706   8.971  < 2e-16 ***
+Germ_Temp21                         -0.2765     0.1492  -1.853   0.0638 .  
+Humidity_Levelmedium                -0.4269     0.4680  -0.912   0.3617    
+Humidity_Levelhigh                  -0.8026     0.4412  -1.819   0.0689 .  
+Temperature42                       -0.3345     0.4760  -0.703   0.4823    
+Temperature62                       -2.6305     0.3899  -6.747 1.51e-11 ***
+Humidity_Levelmedium:Temperature42  -1.3220     0.5849  -2.260   0.0238 *  
+Humidity_Levelhigh:Temperature42    -2.6496     0.5595  -4.736 2.18e-06 ***
+Humidity_Levelmedium:Temperature62  -3.8020     0.6679  -5.693 1.25e-08 ***
+Humidity_Levelhigh:Temperature62    -4.3581     0.8495  -5.130 2.89e-07 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1230.8604  on 17  degrees of freedom
+Residual deviance:    4.4298  on  8  degrees of freedom
+AIC: 91.532
+
+Number of Fisher Scoring iterations: 4
+
+Odds Ratios of the coefficients:                       (Intercept)                        Germ_Temp21 
+                       27.80049820                         0.75846111 
+              Humidity_Levelmedium                 Humidity_Levelhigh 
+                        0.65253084                         0.44814750 
+                     Temperature42                      Temperature62 
+                        0.71570599                         0.07204159 
+Humidity_Levelmedium:Temperature42   Humidity_Levelhigh:Temperature42 
+                        0.26658872                         0.07067878 
+Humidity_Levelmedium:Temperature62   Humidity_Levelhigh:Temperature62 
+                        0.02232547                         0.01280227 
+Overdispersion Ratio: 0.5537194 
+Binomial model 
+Total points: 18 
+Points out of envelope: 0 ( 0 %) 
+Total points: 18 
+Points out of envelope: 0 ( 0 %) 
+Influential Observations based on Cook's Distance:
+ 3 12 
+ 3 12 
+                                                          Coefficient
+(Intercept)                                               (Intercept)
+Germ_Temp21                                               Germ_Temp21
+Humidity_Levelmedium                             Humidity_Levelmedium
+Humidity_Levelhigh                                 Humidity_Levelhigh
+Temperature42                                           Temperature42
+Temperature62                                           Temperature62
+Humidity_Levelmedium:Temperature42 Humidity_Levelmedium:Temperature42
+Humidity_Levelhigh:Temperature42     Humidity_Levelhigh:Temperature42
+Humidity_Levelmedium:Temperature62 Humidity_Levelmedium:Temperature62
+                                     Original No_Influential     Abs_Diff
+(Intercept)                         3.3250539      3.4069961 0.0819421313
+Germ_Temp21                        -0.2764638     -0.4179340 0.1414702481
+Humidity_Levelmedium               -0.4268969     -0.4273722 0.0004753346
+Humidity_Levelhigh                 -0.8026329     -0.8037045 0.0010716793
+Temperature42                      -0.3344858     -0.3348422 0.0003563530
+Temperature62                      -2.6305116     -7.0106964 4.3801847435
+Humidity_Levelmedium:Temperature42 -1.3220482     -1.3262759 0.0042276959
+Humidity_Levelhigh:Temperature42   -2.6496099     -2.6629638 0.0133539441
+Humidity_Levelmedium:Temperature62 -3.8020270      0.5558637 4.3578906186
+                                   Rel_Abs_Diff
+(Intercept)                         0.024643850
+Germ_Temp21                         0.511713535
+Humidity_Levelmedium                0.001113465
+Humidity_Levelhigh                  0.001335205
+Temperature42                       0.001065375
+Temperature62                       1.665145558
+Humidity_Levelmedium:Temperature42  0.003197838
+Humidity_Levelhigh:Temperature42    0.005039966
+Humidity_Levelmedium:Temperature62  1.146201927
+                                                          Coefficient
+(Intercept)                                               (Intercept)
+Germ_Temp21                                               Germ_Temp21
+Humidity_Levelmedium                             Humidity_Levelmedium
+Humidity_Levelhigh                                 Humidity_Levelhigh
+Temperature42                                           Temperature42
+Temperature62                                           Temperature62
+Humidity_Levelmedium:Temperature42 Humidity_Levelmedium:Temperature42
+Humidity_Levelhigh:Temperature42     Humidity_Levelhigh:Temperature42
+Humidity_Levelmedium:Temperature62 Humidity_Levelmedium:Temperature62
+                                       Original No_Influential
+(Intercept)                        2.926231e-19   1.211797e-19
+Germ_Temp21                        6.384799e-02   1.640691e-02
+Humidity_Levelmedium               3.617063e-01   3.614328e-01
+Humidity_Levelhigh                 6.890089e-02   6.870164e-02
+Temperature42                      4.822627e-01   4.820261e-01
+Temperature62                      1.511593e-11   1.707603e-20
+Humidity_Levelmedium:Temperature42 2.380510e-02   2.346255e-02
+Humidity_Levelhigh:Temperature42   2.183111e-06   1.995260e-06
+Humidity_Levelmedium:Temperature62 1.251740e-08   5.498234e-01

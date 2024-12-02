@@ -1,0 +1,41 @@
+Gamma Model Dispersion Statistic: 1.087715 
+Influential Points:  28 32Summary of Gamma GLM:
+
+Call:
+glm(formula = Tempo ~ log(WBC) + AG, family = Gamma(link = "log"), 
+    data = data_combined)
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   5.8154     1.3487   4.312 0.000161 ***
+log(WBC)     -0.3044     0.1375  -2.213 0.034617 *  
+AGPositive    1.0176     0.3642   2.794 0.008982 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for Gamma family taken to be 1.087715)
+
+    Null deviance: 58.138  on 32  degrees of freedom
+Residual deviance: 40.319  on 30  degrees of freedom
+AIC: 301.49
+
+Number of Fisher Scoring iterations: 8
+
+
+Exponentiated Coefficients (Multiplicative Effects):
+(Intercept)    log(WBC)  AGPositive 
+335.4291990   0.7375655   2.7666722 
+
+Interpretation of Estimates:
+The exponentiated coefficients represent the multiplicative change in the mean survival Tempo for a one-unit increase in the predictor.
+- For log(WBC): Each one-unit increase in log(WBC) multiplies the mean survival Tempo by 0.738 .
+- For AGPositive: Being AG positive multiplies the mean survival Tempo by 2.767 compared to AG negative patients.
+
+Dispersion Statistic:
+Gamma Model Dispersion Statistic: 1.087715 
+The dispersion statistic is close to 1, indicating no significant overdispersion.
+
+Influential Observations:
+Observations with high Cook's Distance:
+28 32 
+28 32 
